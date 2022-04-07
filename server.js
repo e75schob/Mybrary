@@ -11,6 +11,9 @@ const bodyParser = require('body-parser')
 const indexRouter =require ('./routes/index')
 const authorRouter =require ('./routes/authors')
 
+const PORT = process.env.PORT || 3000;
+
+
 app.set('view engine', 'ejs')
 app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
@@ -33,3 +36,4 @@ app.use('/authors', authorRouter)
 
 
 app.listen(process.env.PORT || 3000)
+
